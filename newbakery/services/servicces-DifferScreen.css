@@ -1,0 +1,148 @@
+/* <!-- ############################ NAv  Bar ############################ --> */
+
+@media (max-width: 700px){
+    .nav-items {
+        padding-left: 4px;
+        padding-top: 5px;
+    }
+    .active, .btn:hover{
+      color: white;
+      font-size: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+  }
+  }
+  
+  /* <!-- ############################ Side Bar ############################ --> */
+  
+  @media (max-width: 700px){
+    .sidebar.active{
+        width: 50%;
+        min-width: 100px;
+        z-index: 1030;
+        opacity: 0.9;
+    }
+    .sidebar ul a:hover{
+        color: white;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+  }
+
+
+  /* <!-- ############################ SERVICES ############################ --> */
+
+@media (max-width:1050px){
+    .header {
+        text-align: center;
+        font-size: 50px;
+        font-family: "Lobster", cursive;
+        word-spacing: 0.4rem;
+        padding-top: 4%;
+      }
+    .grid_container {
+        display: grid;
+        min-height: 100vh;
+        grid-gap: 3rem;
+        grid-template-columns: 0.2fr 0.2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "biscuit1 biscuit2"
+          " biscuit3 biscuit4"
+          "biscuit5 biscuit6"
+          "biscuit7 biscuit8 "
+          "biscuit9 biscuit10 "
+          "cake1 cake2"
+          "cake3 cake4"
+          "cake5 cake6"
+          "cake7 cake8"
+          "cake9 cake10"
+          "cupcake1 cupcake2"
+          "cupcake3 cupcake4"
+          "cupcake5 cupcake6 "
+          "cupcake7 cupcake8"
+          "cupcake9 cupcake10"
+          "pastry1 pastry2"
+          "pastry3 pastry4 "
+          "pastry5 pastry6"
+          "pastry7 pastry8"
+          "pastry9 pastry10"
+          "spicy1 spicy2"
+          "spicy3 spicy4 "
+          "spicy5 spicy6 "
+          "spicy7 spicy8"
+          ;
+      }
+      
+      /* <<<<<<<<<<<<<<<<<<<< FOR ALL items >>>>>>>>>>>>>>>>> */
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+      }
+      .items {
+        width: 315px;
+        height: 315px;
+        padding: 2%;
+        box-shadow: 0 4px 25px rgba(51, 50, 50, 0.9);
+        border-radius: 5px;
+      }
+      
+  }
+
+@media (max-width:800px){
+    .header {
+        text-align: center;
+        font-size: 35px;
+        font-family: "Lobster", cursive;
+        word-spacing: 0.1rem;
+        padding-top: 4%;
+      }
+    .grid_container {
+        display: grid;
+        min-height: 100vh;
+        grid-gap: 1rem;
+        grid-template-columns: 0.2fr 0.2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "biscuit1 biscuit2"
+          " biscuit3 biscuit4"
+          "biscuit5 biscuit6"
+          "biscuit7 biscuit8 "
+          "biscuit9 biscuit10 "
+          "cake1 cake2"
+          "cake3 cake4"
+          "cake5 cake6"
+          "cake7 cake8"
+          "cake9 cake10"
+          "cupcake1 cupcake2"
+          "cupcake3 cupcake4"
+          "cupcake5 cupcake6 "
+          "cupcake7 cupcake8"
+          "cupcake9 cupcake10"
+          "pastry1 pastry2"
+          "pastry3 pastry4 "
+          "pastry5 pastry6"
+          "pastry7 pastry8"
+          "pastry9 pastry10"
+          "spicy1 spicy2"
+          "spicy3 spicy4 "
+          "spicy5 spicy6 "
+          "spicy7 spicy8"
+          ;
+      }
+      
+      /* <<<<<<<<<<<<<<<<<<<< FOR ALL items >>>>>>>>>>>>>>>>> */
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+      }
+      .items {
+        width: 215px;
+        height: 215px;
+        padding: 2%;
+        box-shadow: 0 4px 25px rgba(51, 50, 50, 0.9);
+        border-radius: 5px;
+      }
+  }

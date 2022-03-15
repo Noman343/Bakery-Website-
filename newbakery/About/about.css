@@ -1,0 +1,224 @@
+*,::after,::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+html, body {
+  line-height: 1.5;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+
+}
+img{
+  width: 100%;
+  border-radius: 3px;
+}
+
+            /* $$$$$$$$$$$ NAV BAR $$$$$$$$$$$$$$$$$$ */
+.nav-container{
+  background-position: top center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: #2b0247;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  left: 0;
+  right: 0;
+}
+.nav-items {
+  padding-left: 10%;
+  padding-top: 5px;
+}
+a{
+  text-decoration: none;
+  font-size: 17px;
+  padding: 15px;
+  color: white;
+  transition: 0.5s;
+}
+
+.active, .btn:hover{
+  color: white;
+  font-size: 24px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* <!-- ############################ RESPONISIVE NAv  Bar ############################ --> */
+
+@media (max-width: 700px){
+  .nav-items {
+      padding-left: 4px;
+      padding-top: 5px;
+  }
+  .active, .btn:hover{
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+}
+            /* $$$$$$$$$$$ side BAR $$$$$$$$$$$$$$$$$$ */
+
+.shadow.active {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  background-color: black;
+}
+.toggle {
+  background-image: url(./menu_black_36dp.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.toggle.active {
+  background-image: url(./close_black_36dp.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.sidebar ul {
+  list-style-type: none;
+  margin-top: 10%;
+  padding: 0 10%;
+  font-weight: 500;
+  font-style: oblique;
+}
+.sidebar ul a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+.sidebar ul a:hover {
+  color: white;
+  font-size: 26px;
+  transition: 0.3s;
+}
+.sidebar {
+  height: 100vh;
+  width: 0;
+  background-color: #2b0247;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 0;
+  transition: 0.6s;
+  opacity: 1;
+  font-size: 20px;
+  z-index: 1030;
+}
+.sidebar.active {
+  width: 27%;
+  min-width: 100px;
+  z-index: 1030;
+  opacity: 0.9;
+}
+  /* <!-- ############################ RESPONISIVESide Bar ############################ --> */
+  
+  @media (max-width: 700px){
+    .sidebar.active{
+        width: 50%;
+        min-width: 100px;
+        z-index: 1030;
+        opacity: 0.9;
+    }
+    .sidebar ul a:hover{
+        color: white;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+  }
+
+/* <!-- ############################ about ############################ --> */
+
+
+h1 {
+  color: black;
+  margin-top: 0;
+  font-size: 50px;
+  font-family: "Lobster", cursive;
+}
+.about_container2ndPage {
+  background: linear-gradient(to right, rgb(240, 240, 131), chocolate,chocolate,rgb(240, 240, 131));
+  width: 70%;
+  padding-top: 5%;
+  margin: auto;
+}
+.about_container2ndPage p {
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  font-size: 26px;
+  text-align: justify;
+}
+
+#about-text{
+  background-color: rgb(240, 240, 131);
+  width: 100wh;
+}
+.follow-icons{
+  text-align: center;
+  margin: auto;
+}
+.iconimg{
+  margin: 5%;    
+  height: 40px;
+  width: 40px;
+}
+.insta{
+  border-radius: 10px;
+}
+/* <!-- ############################ FOOTER ############################ --> */
+
+#footer{
+  height: 88vh;
+  background-color: #2b0247;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.pic_container{
+  height: 5%;
+  width: 100%;
+  text-align: center;
+  padding-top: 1%;
+}
+a .footer-img{
+  height: 100%;
+  width: 70%;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0;
+}
+a .footer-img:hover{
+  box-shadow: 0 4px 25px rgba(90, 89, 89, 0.9);
+  transition: 0.6s;
+}
+
+.privacy-policy{
+  background-color:#9900ffd8 ;
+  margin-bottom: 0%;
+}
+#footer-2022{    
+  text-align: center;
+  color: white;
+  padding: 5px 5px;
+}

@@ -1,0 +1,1063 @@
+*,::after,::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: skyblue;
+  font-family: Helvetica, sans-serif;
+}
+
+/* $$$$$$$$$$$ NAV BAR $$$$$$$$$$$$$$$$$$ */
+.nav-container {
+  background-position: top center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: #2b0247;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  left: 0;
+  right: 0;
+}
+.nav-items {
+  padding-left: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+  padding: 15px;
+  color: white;
+  transition: 0.5s;
+}
+
+.active,
+.btn:hover {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* $$$$$$$$$$$ side BAR $$$$$$$$$$$$$$$$$$ */
+
+.shadow.active {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  background-color: black;
+}
+.toggle {
+  background-image: url(./menu_black_36dp.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.toggle.active {
+  background-image: url(./close_black_36dp.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.sidebar ul {
+  list-style-type: none;
+  margin-top: 10%;
+  padding: 0 10%;
+  font-weight: 500;
+  font-style: oblique;
+}
+.sidebar ul a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+.sidebar ul a:hover {
+  color: white;
+  font-size: 26px;
+  transition: 0.3s;
+}
+.sidebar {
+  height: 100vh;
+  width: 0;
+  background-color: #2b0247;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 0;
+  transition: 0.6s;
+  opacity: 1;
+  font-size: 20px;
+  z-index: 1030;
+}
+.sidebar.active {
+  width: 27%;
+  min-width: 100px;
+  z-index: 1030;
+  opacity: 0.9;
+}
+
+/* <!-- ################### biscuits ###################### --> */
+
+.header {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Lobster", cursive;
+  word-spacing: 0.5rem;
+  margin-top: 4%;
+}
+.grid-holder{
+  display: flex;
+  justify-content: center;
+}
+.grid_container {
+  display: grid;
+  min-height: 100vh;
+  grid-gap: 3rem;
+  grid-template-columns: 0.2fr 0.2fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr;
+  grid-template-areas:
+    "biscuit1 biscuit2 biscuit3"
+    "biscuit4 biscuit5 biscuit6"
+    "biscuit7 biscuit8 biscuit9"
+    "biscuit10 cake1 cake2 "
+    "cake3 cake4 cake5"
+    "cake6 cake7 cake8"
+    "cake9 cake10 cupcake1"
+    "cupcake2 cupcake3 cupcake4"
+    "cupcake5 cupcake6 cupcake7"
+    "cupcake8 cupcake9 cupcake10"
+    "pastry1 pastry2 pastry3"
+    "pastry4 pastry5 pastry6"
+    "pastry7 pastry8 pastry9"
+    "pastry10 spicy1 spicy2"
+    "spicy3 spicy4 spicy5"
+    "spicy6 spicy7 spicy8"
+    ;
+}
+
+/* <<<<<<<<<<<<<<<<<<<< FOR ALL items >>>>>>>>>>>>>>>>> */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.backFace {
+  background: linear-gradient(deepskyblue, skyblue, deepskyblue);
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+}
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+.items {
+  width: 315px;
+  height: 315px;
+  padding: 2%;
+  box-shadow: 0 4px 25px rgba(51, 50, 50, 0.9);
+  border-radius: 5px;
+}
+
+/* <<<<<<<<<<<<< Item 1 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b1 {
+  grid-area: biscuit1;
+}
+.flip-card-b1:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b1-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 2 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b2 {
+  grid-area: biscuit2;
+}
+.flip-card-b2:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b2-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 3 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b3 {
+  grid-area: biscuit3;
+}
+.flip-card-b3:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b3-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 4 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b4 {
+  grid-area: biscuit4;
+}
+.flip-card-b4:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b4-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 5 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b5 {
+  grid-area: biscuit5;
+}
+.flip-card-b5:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b5-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 6 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b6 {
+  grid-area: biscuit6;
+}
+.flip-card-b6:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b6-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 7 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b7 {
+  grid-area: biscuit7;
+}
+.flip-card-b7:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b7-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 8 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b8 {
+  grid-area: biscuit8;
+}
+.flip-card-b8:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b8-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 9 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b9 {
+  grid-area: biscuit9;
+}
+.flip-card-b9:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b9-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 10 >>>>>>>>>>>>>>>>> */
+
+.flip-card-b10 {
+  grid-area: biscuit10;
+}
+.flip-card-b10:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.b10-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+/* <<<<<<$$$$$$$$<<<<<<<< CAkes >>>>>>>>>$$$$$$$$$$$$$$$$$>>>>
+
+
+  /* <<<<<<<<<<<<< Item 1 >>>>>>>>>>>>>>>>> */
+
+
+  .flip-card-c1{
+    grid-area: cake1;
+}
+.flip-card-c1:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c1-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 2 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c2{
+    grid-area: cake2;
+}
+.flip-card-c2:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c2-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 3 >>>>>>>>>>>>>>>>> */
+
+.flip-card-c3{
+    grid-area: cake3;
+}
+.flip-card-c3:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c3-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 4 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c4{
+    grid-area: cake4;
+}
+.flip-card-c4:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c4-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 5 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c5{
+    grid-area: cake5;
+}
+.flip-card-c5:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c5-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 6 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c6{
+    grid-area: cake6;
+}
+.flip-card-c6:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c6-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 7 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c7{
+    grid-area: cake7;
+}
+.flip-card-c7:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c7-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 8 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c8{
+    grid-area: cake8;
+}
+.flip-card-c8:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c8-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 9 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c9{
+    grid-area: cake9;
+}
+.flip-card-c9:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c9-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 10 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c10{
+    grid-area: cake10;
+}
+.flip-card-c10:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c10-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+          
+
+/* <<<<<<$$$$$$$$<<<<<<<< CUP CAkes >>>>>>>>>$$$$$$$$$$$$$$$$$>>>>
+
+           /* <<<<<<<<<<<<< Item 1 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p1{
+    grid-area: cupcake1;
+}
+.flip-card-c-p1:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p1-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 2 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p2{
+    grid-area: cupcake2;
+}
+.flip-card-c-p2:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p2-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 3 >>>>>>>>>>>>>>>>> */
+
+.flip-card-c-p3{
+    grid-area: cupcake3;
+}
+.flip-card-c-p3:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p3-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 4 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p4{
+    grid-area: cupcake4;
+}
+.flip-card-c-p4:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p4-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 5 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p5{
+    grid-area: cupcake5;
+}
+.flip-card-c-p5:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p5-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 6 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p6{
+    grid-area: cupcake6;
+}
+.flip-card-c-p6:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p6-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 7 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p7{
+    grid-area: cupcake7;
+}
+.flip-card-c-p7:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p7-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 8 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p8{
+    grid-area: cupcake8;
+}
+.flip-card-c-p8:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p8-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 9 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p9{
+    grid-area: cupcake9;
+}
+.flip-card-c-p9:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p9-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 10 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-c-p10{
+    grid-area: cupcake10;
+}
+.flip-card-c-p10:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.c-p10-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/* <<<<<<$$$$$$$$<<<<<<<< Pastries >>>>>>>>>$$$$$$$$$$$$$$$$$>>>>
+
+/* <<<<<<<<<<<<< Item 1 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p1 {
+  grid-area: pastry1;
+}
+.flip-card-p1:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p1-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 2 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p2 {
+  grid-area: pastry2;
+}
+.flip-card-p2:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p2-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 3 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p3 {
+  grid-area: pastry3;
+}
+.flip-card-p3:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p3-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 4 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p4 {
+  grid-area: pastry4;
+}
+.flip-card-p4:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p4-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 5 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p5 {
+  grid-area: pastry5;
+}
+.flip-card-p5:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p5-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 6 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p6 {
+  grid-area: pastry6;
+}
+.flip-card-p6:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p6-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 7 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p7 {
+  grid-area: pastry7;
+}
+.flip-card-p7:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p7-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 8 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p8 {
+  grid-area: pastry8;
+}
+.flip-card-p8:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p8-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 9 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p9 {
+  grid-area: pastry9;
+}
+.flip-card-p9:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p9-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* <<<<<<<<<<<<< Item 10 >>>>>>>>>>>>>>>>> */
+
+.flip-card-p10 {
+  grid-area: pastry10;
+}
+.flip-card-p10:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.p10-front,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 1 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s1{
+    grid-area: spicy1;
+}
+.flip-card-s1:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s1-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 2 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s2{
+    grid-area: spicy2;
+}
+.flip-card-s2:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s2-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 3 >>>>>>>>>>>>>>>>> */
+
+.flip-card-s3{
+    grid-area: spicy3;
+}
+.flip-card-s3:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s3-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 4 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s4{
+    grid-area: spicy4;
+}
+.flip-card-s4:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s4-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 5 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s5{
+    grid-area: spicy5;
+}
+.flip-card-s5:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s5-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 6 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s6{
+    grid-area: spicy6;
+}
+.flip-card-s6:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s6-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+            /* <<<<<<<<<<<<< Item 7 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s7{
+    grid-area: spicy7;
+}
+.flip-card-s7:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s7-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+            /* <<<<<<<<<<<<< Item 8 >>>>>>>>>>>>>>>>> */
+
+
+.flip-card-s8{
+    grid-area: spicy8;
+}
+.flip-card-s8:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.s8-front, .backFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+/* <!-- ############################ FOOTER ############################ --> */
+
+#footer{
+  height: 88vh;
+  background-color: #2b0247;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.pic_container{
+  height: 5%;
+  width: 100%;
+  text-align: center;
+  padding-top: 1%;
+}
+a .footer-img{
+  height: 100%;
+  width: 70%;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0;
+}
+a .footer-img:hover{
+  box-shadow: 0 4px 25px rgba(90, 89, 89, 0.9);
+  transition: 0.6s;
+}
+
+.privacy-policy{
+  background-color:#9900ffd8 ;
+}
+#footer-2022{    
+  text-align: center;
+  color: white;
+  padding: 5px 5px;
+}
